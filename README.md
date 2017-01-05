@@ -10,7 +10,7 @@
 
 ## How to add the build server to my pacman ?
 
-1.Add this entry to your file `/etc/pacman.conf`:
+1.Add these lines at the end of this file `/etc/pacman.conf`:
 ```
 [unixfox]
 SigLevel = Never
