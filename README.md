@@ -26,7 +26,8 @@ sudo pacman -Syu
 
 ## Why my package hasn't been built?
 You should check if there are any problem with your package : https://status.aur.unixfox.eu/problems.
-If need some help with your package, you can open [issue](https://github.com/unixfox/aur/issues).
+
+If you need some help with your package(s), you can open [issue](https://github.com/unixfox/aur/issues).
 
 ## How often packages are updated?
 The packages are rebuild each 10 minutes if there are no build pending.
