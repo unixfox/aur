@@ -40,6 +40,14 @@
 - libicns
 - pythonqt
 - screencloud
+- ruby-archive-tar-minitar
+- ruby-commander-4.2.1
+- ruby-highline-1.6
+- ruby-httpclient
+- ruby-net-scp
+- ruby-net-ssh-2.9.2
+- ruby-net-ssh-multi
+- ruby-open4
 - rhc
 - smartgit
 - teleconsole
