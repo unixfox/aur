@@ -1,5 +1,8 @@
 # AUR public server (powered by AurBS)
 
+* State of the server : **testing/beta**
+* Uptime of the server : http://status.unixfox.eu/778526456
+
 # FAQ
 ## How to add package(s) ?
 1. Edit the file `pkgs` : https://github.com/unixfox/aur/edit/master/pkgs
