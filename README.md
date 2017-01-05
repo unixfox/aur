@@ -26,7 +26,7 @@ You should check if there are any problem with your package : https://status.aur
 If need some help with your package, you can open [issue](https://github.com/unixfox/aur/issues).
 
 ## How often packages are updated ?
-The packages are rebuild each 10 minutes.
+The packages are rebuild each 10 minutes if there are no build pending.
 
 ## Is there an SLA?
 
