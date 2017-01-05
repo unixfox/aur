@@ -14,7 +14,7 @@
 ```
 [unixfox]
 SigLevel = Never
-Server = https://aur.unixfox.eu/aurbs/$arch
+Server = https://aur.unixfox.eu/$arch
 ```
 2.Update your repositories:
 ```
