@@ -21,7 +21,7 @@ Server = https://aur.unixfox.eu/$arch
 sudo pacman -Syu
 ```
 
-## Why my package hasn't been builed
+## Why my package hasn't been built
 You should check if there are any problem with your package : https://status.aur.unixfox.eu/problems.
 If need some help with your package, you can open [issue](https://github.com/unixfox/aur/issues).
 
@@ -29,5 +29,4 @@ If need some help with your package, you can open [issue](https://github.com/uni
 The packages are rebuild each 10 minutes if there are no build pending.
 
 ## Is there an SLA?
-
 Since this AUR build server is managed by only me, there is no SLA. The build server may go down from time to time (example: maintenance).
