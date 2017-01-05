@@ -9,7 +9,7 @@
 2. Add your package(s) at the end of the file using the same way as others (with a `-`).
 3. Save the file and create a pull request.
 4. Wait for the owner accepts the pull request.
-5. Check the status of your package at https://status.aur.unixfox.eu
+5. Check current status of your package at https://status.aur.unixfox.eu/status.
 
 ## How to add the build server to my pacman?
 
