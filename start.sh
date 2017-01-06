@@ -4,7 +4,7 @@ if pgrep -x "aurbs" > /dev/null
 then
     echo "running" > /dev/null
 else
-    cp /etc/aurbs.yml.demo /etc/aurbs.yml
+    wget https://github.com/unixfox/aur/raw/master/aurbs.yml -O /etc/aurbs.yml
     curl -sS https://raw.githubusercontent.com/unixfox/aur/master/pkgs >> /etc/aurbs.yml
-    aurbs > /root/aurbs/session_"$DATE".txt
+    aurbs > /var/log/aurbs/"$DATE".txt
 fi
