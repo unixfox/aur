@@ -1,0 +1,56 @@
+---
+- name: AUR | get metadata from AurJson api
+  connection: local
+  sudo: no
+  uri: >
+    url=https://aur.archlinux.org/rpc.php?type=info&arg={{ pkg_name | mandatory }}
+    return_content=yes
+    timeout=6
+  register: api_info
+
+- assert:
+    that:
+      - api_info.status == 200
+      - api_info.json is defined
+      - api_info.json.type == 'info'
+      - api_info.json.resultcount == 1
+      - api_info.json.results is defined
+
+- name: AUR | {{ pkg_name }} | download tarball
+  sudo: no
+  connection: local
+  get_url: >
+    url='https://aur.archlinux.org{{ api_info.json.results.URLPath }}'
+    dest='/tmp/'
+  register: aur_tarball
+
+- name: AUR | {{ pkg_name }} | upload tarball to host and extract it
+  sudo: yes
+  sudo_user: "{{ makepkg_nonroot_user }}"
+  unarchive: >
+    src={{ aur_tarball.dest }}
+    dest=/tmp/
+  register: extracted_pkg
+
+# This will break if run as root. Set user to use with makepkg with 'makepkg_user' var
+- name: AUR | {{ pkg_name }} | build package, including missing dependencies
+  when: extracted_pkg | changed
+  sudo: yes
+  sudo_user: "{{ makepkg_nonroot_user }}"
+  command: >
+    makepkg --noconfirm --noprogressbar -mfs
+    chdir=/tmp/{{ pkg_name }}
+  register: aur_makepkg_result
+
+# Shameless variable declaration hack
+- shell: ls -1 /tmp/{{ pkg_name | quote }} | grep pkg.tar
+  register: compiled_package_name
+
+- name: AUR | {{ pkg_name }} | install newly-built aur package with pacman
+  when: aur_makepkg_result | changed
+  sudo: yes
+  shell: >
+    pacman --noconfirm --noprogressbar --needed -U {{ compiled_package_name.stdout | quote }}
+    chdir=/tmp/{{ pkg_name }}
+  register: pacman_install_result
+  changed_when: pacman_install_result.stdout is defined && pacman_install_result.stdout.find('there is nothing to do') == -1
