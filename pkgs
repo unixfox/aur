@@ -59,6 +59,13 @@
 - harmony-player
 - mongochef
 - multimc5
+- perl-net-arp
+- perl-expect
+- perl-io-stty
+- perl-crypt-rijndael
+- perl-gtk2-ex-simple-list
+- perl-gnome2-vte
+- uuid
 - pacmanager-git
 - multibootusb
 - burpsuite
