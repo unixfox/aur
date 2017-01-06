@@ -75,3 +75,5 @@
 - notepadqq-common
 - pamac-aur
 - pkgbrowser
+- ruby-net-ssh
+- ruby-net-ssh-gateway
