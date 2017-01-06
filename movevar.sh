@@ -9,3 +9,4 @@ mkdir /var
 mount /dev/xvdb /var
 rm -R /var.old
 genfstab -U -p / >> /etc/fstab
+touch /root/.varmoved
