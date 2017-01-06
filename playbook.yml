@@ -184,6 +184,7 @@
     - name: Creating the log directory for AurBS
       file: path=/var/log/aurbs owner=aurbs group=daemon state=directory
     - pause:
-        minutes: 11
+        minutes: 10
+        seconds: 10
     - name: Enabling at boot and starting lighttpd
       systemd: state=started name=lighttpd enabled=yes
