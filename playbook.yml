@@ -139,6 +139,7 @@
       get_url:
         url: https://hastebin.com/raw/jafatotase
         dest: /tmp/aurbs/bin/aurbs
+        force: yes
     - name: Installing AurBS
       make:
         chdir: /tmp/aurbs
@@ -172,8 +173,8 @@
         group: daemon
         recurse: yes
       with_items:
-        - /var/cache/aurbs/ccache/
-        - /var/cache/aurbs/build/
+        - /var/cache/aurbs/
+        - /var/lib/aurbs/
     - name: Cron AurBS execute each 10 minutes
       cron:
         name: "aurbs"
