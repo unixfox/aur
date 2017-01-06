@@ -145,7 +145,7 @@
         chdir: /tmp/aurbs
         target: install
     - name: Copy the template of lighttpd
-      synchronize: mode=pull src=/tmp/aurbs/templates/lighttpd.conf.sample dest=/etc/lighttpd/lighttpd.conf
+      command: cp /tmp/aurbs/templates/lighttpd.conf.sample /etc/lighttpd/lighttpd.conf
     - name: Set PACKAGER to MAKEPKG config file
       lineinfile:
         dest: /etc/makepkg.conf
@@ -184,7 +184,6 @@
     - name: Creating the log directory for AurBS
       file: path=/var/log/aurbs owner=aurbs group=daemon state=directory
     - pause:
-        minutes: 10
-        seconds: 10
+        minutes: 11
     - name: Enabling at boot and starting lighttpd
       systemd: state=started name=lighttpd enabled=yes
