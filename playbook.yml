@@ -159,28 +159,12 @@
         url: https://github.com/unixfox/aur/raw/master/aurbs.sh
         dest: /var/cache/aurbs/start.sh
         mode: 0764
-    - name: Giving rights to AurBS to edit his configuration
-      file:
-        path: /etc/aurbs.yml
-        owner: aurbs
-        group: daemon
-        mode: 0664
-    - name: Giving rights to AurBS for his cache and lib directories
-      file:
-        path: "{{item}}"
-        state: directory
-        owner: aurbs
-        group: daemon
-        recurse: yes
-      with_items:
-        - /var/cache/aurbs/
-        - /var/lib/aurbs/
     - name: Cron AurBS execute each 10 minutes
       cron:
         name: "aurbs"
         minute: "*/10"
         job: "bash /var/cache/aurbs/start.sh"
-        user: aurbs
+        user: root
     - name: Creating the log directory for AurBS
       file: path=/var/log/aurbs owner=aurbs group=daemon state=directory
     - pause:
