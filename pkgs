@@ -74,7 +74,7 @@
 - pkgbrowser
 - ruby-net-ssh
 - ruby-net-ssh-gateway
-- i2p-bin
+- i2pd
 - java-service-wrapper
 - ruby-highline
 - grumpy-git
