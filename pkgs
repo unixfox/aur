@@ -79,3 +79,9 @@
 - grumpy-git
 - lego-git
 - teamspeak3-server
+- gitea
+- influxdb
+- sonarqube
+- sentry
+- zabbix-agent
+- zabbix-server-mysql
