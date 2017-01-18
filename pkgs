@@ -82,6 +82,8 @@
 - gitea
 - influxdb
 - sonarqube
+- ncurses5-compat-libs
 - sentry
+- iksemel
 - zabbix-agent
 - zabbix-server-mysql
