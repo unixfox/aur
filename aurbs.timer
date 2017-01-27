@@ -2,8 +2,8 @@
 Description=Run AurBS build hourly
 
 [Timer]
-OnCalendar=*:0,15,30,45
-Persistent=true
+OnCalendar=*:0/15
+Unit=aurbs.service
 
 [Install]
 WantedBy=timers.target
