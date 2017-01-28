@@ -65,6 +65,7 @@
 - perl-gtk2-ex-simple-list
 - perl-gnome2-vte
 - uuid
+- perl-gtk2-unique
 - pacmanager-git
 - multibootusb
 - burpsuite
@@ -88,6 +89,8 @@
 - zabbix-agent
 - zabbix-server-mysql
 - haste-server-git
+- libmypaint-git
+- gegl-git
 - gimp-git
 - nodejs-lts-argon
 - keepassxc
