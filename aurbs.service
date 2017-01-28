@@ -1,0 +1,13 @@
+[Unit]
+Description=AurBS
+
+[Service]
+ExecStart=/var/cache/aurbs/start.sh
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=aurbs
+User=aurbs
+Group=daemon
+
+[Install]
+WantedBy=multi-user.target
