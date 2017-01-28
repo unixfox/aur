@@ -1,6 +1,8 @@
 #!/usr/bin/env ansible-playbook
 ---
 
+# Sync IP avec cloudflare et sync en ftp vers pulseheberg
+
 - name: Configuring the base
   hosts: localhost
   tasks:
@@ -12,7 +14,7 @@
   - name: Creating a security group
     ec2_group:
       name: security_group_default
-      description: aurbs
+      description: archlinux
       rules:
         - proto: tcp
           from_port: 80
@@ -39,9 +41,9 @@
       key_name: ec2_default
       exact_count: 1
       count_tag:
-        Name: aurbs
+        Name: archlinux
       instance_tags:
-        Name: aurbs
+        Name: archlinux
       instance_type: t2.medium
       image: ami-d763a7b8
       wait: yes
@@ -95,7 +97,7 @@
         name: devtools,rsync,python-setuptools,python-simplejson,python-yaml,python-pymongo,python-flask,pyalpm,ccache,sudo,yaourt,git,wget,lighttpd,mongodb,unzip,arch-install-scripts,curl
         update_cache: yes
     - name: Creating directories for second volume
-      file: path=/mnt/xvdb state=directory
+      file: path=/mnt/var state=directory
     - name: Check if second volume already formated
       shell: lsblk -as /dev/xvdb -o FSTYPE | grep -q ext4 && echo Present || echo Absent
       register: checkpartition
@@ -105,26 +107,39 @@
       when: checkpartition.stdout == "Absent"
     - name: Mounting the second volume
       mount:
-        name: /mnt/xvdb
+        name: /mnt/var
         src: /dev/xvdb
         fstype: ext4
         state: mounted
-    - name: Creating directory for AurBS
-      file: path={{item}} state=directory
-      with_items:
-        - /mnt/xvdb/cache
-        - /mnt/xvdb/lib
-        - /mnt/xvdb/cache/aurbs
-        - /mnt/xvdb/lib/aurbs
-        - /var/cache/aurbs
-        - /var/lib/aurbs
-    - name: Binding directories of AurBS to the second volume
-      mount: opts=bind fstype=none state=mounted name={{item.0}} src={{item.1}}
-      with_nested:
-        - ['/mnt/xvdb/cache/aurbs', '/var/cache/aurbs']
-        - ['/mnt/xvdb/lib/aurbs', '/var/cache/aurbs']
+    - name: Synchronize /var and /mnt/var
+      synchronize:
+        src: /var
+        dest: /mnt
+        rsync_opts:
+          - "--one-file-system"
+          - "-P"
+      delegate_to: "{{ inventory_hostname }}"
+    - name: Unmounting the second volume
+      mount:
+        name: /mnt/var
+        src: /dev/xvdb
+        fstype: ext4
+        state: unmounted
+    - name: Remove /var
+      file:
+        path: /var
+        state: absent
+    - name: Mounting the second volume to /var
+      mount:
+        name: /var
+        src: /dev/xvdb
+        fstype: ext4
+        state: mounted
     - name: Upgrading the system
       pacman: update_cache=yes upgrade=yes
+    - name: set timezone to Asia/Tokyo
+      timezone:
+        name: Europe/Paris
     - name: install package-query (a yaourt dependency)
       include: aur/pkg.yml pkg_name=package-query
     - name: install yaourt
@@ -159,16 +174,48 @@
         url: https://github.com/unixfox/aur/raw/master/aurbs.sh
         dest: /var/cache/aurbs/start.sh
         mode: 0764
-    - name: Cron AurBS execute each 10 minutes
-      cron:
-        name: "aurbs"
-        minute: "*/10"
-        job: "bash /var/cache/aurbs/start.sh"
-        user: root
+    - name: Giving permissions to AurBS user [1]
+      file:
+        path: /var/cache/aurbs
+        state: directory
+        owner: aurbs
+        group: daemon
+        mode: 0755
+        recurse: yes
+    - name: Giving permissions to AurBS user [2]
+      file:
+        path: /var/lib/aurbs
+        state: directory
+        owner: aurbs
+        group: daemon
+        recurse: yes
+    - name: Giving permissions to AurBS user [3]
+      file:
+        path: /etc/aurbs.yml
+        owner: aurbs
+        group: daemon
+    - name: Downloading the systemd service
+      get_url:
+        url: https://github.com/unixfox/aur/raw/master/aurbs.service
+        dest: /etc/systemd/system/aurbs.service
+        mode: 0764
+    - name: Downloading the systemd timer
+      get_url:
+        url: https://github.com/unixfox/aur/raw/master/aurbs.timer
+        dest: /etc/systemd/system/aurbs.timer
+        mode: 0764
     - name: Creating the log directory for AurBS
       file: path=/var/log/aurbs owner=aurbs group=daemon state=directory
-    - pause:
-        minutes: 10
-        seconds: 10
+    - name: Activating the cron like for AurBS
+      systemd:
+        name: aurbs.timer
+        daemon_reload: yes
+        enabled: yes
+        state: started
+        masked: no
+    - name: Starting the AurBS build
+      systemd:
+        name: aurbs.service
+        state: started
     - name: Enabling at boot and starting lighttpd
       systemd: state=started name=lighttpd enabled=yes
