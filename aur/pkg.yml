@@ -16,8 +16,20 @@
       - api_info.json.resultcount == 1
       - api_info.json.results is defined
 
+- name: AUR | get installed package version
+  sudo: no
+  shell: pacman -Q | grep {{ pkg_name }} | cut -d' ' -f2
+  register: pacman_query_result
+
+- name: AUR | Check if the AUR Version is already installed
+  sudo: no
+  when: api_info.json.results.Version != pacman_query_result.stdout
+  shell: echo "Needs Install"
+  register: version_check_result
+
 - name: AUR | {{ pkg_name }} | download tarball
   sudo: no
+  when: version_check_result.changed
   connection: local
   get_url: >
     url='https://aur.archlinux.org{{ api_info.json.results.URLPath }}'
@@ -26,6 +38,7 @@
 
 - name: AUR | {{ pkg_name }} | upload tarball to host and extract it
   sudo: yes
+  when: version_check_result.changed
   sudo_user: "{{ makepkg_nonroot_user }}"
   unarchive: >
     src={{ aur_tarball.dest }}
@@ -42,15 +55,11 @@
     chdir=/tmp/{{ pkg_name }}
   register: aur_makepkg_result
 
-# Shameless variable declaration hack
-- shell: ls -1 /tmp/{{ pkg_name | quote }} | grep pkg.tar
-  register: compiled_package_name
-
 - name: AUR | {{ pkg_name }} | install newly-built aur package with pacman
   when: aur_makepkg_result | changed
   sudo: yes
   shell: >
-    pacman --noconfirm --noprogressbar --needed -U {{ compiled_package_name.stdout | quote }}
+    pacman --noconfirm --noprogressbar --needed -U *.pkg.tar.xz
     chdir=/tmp/{{ pkg_name }}
   register: pacman_install_result
-  changed_when: pacman_install_result.stdout is defined && pacman_install_result.stdout.find('there is nothing to do') == -1
+  changed_when: pacman_install_result.stdout is defined and pacman_install_result.stdout.find('there is nothing to do') == -1
