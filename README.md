@@ -30,7 +30,7 @@ You should check if there are any problem with your package : https://aurbs.unix
 If you need some help with your package(s), you can open [issue](https://github.com/unixfox/aur/issues).
 
 ## How often packages are updated?
-The packages are rebuild each 10 minutes if there are no build pending.
+The packages are rebuild each 15 minutes if there are no build pending.
 
 ## Is there an SLA?
 Since this AUR build server is managed by only me, there is no SLA. The build server may go down from time to time (example: maintenance).
