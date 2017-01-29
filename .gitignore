@@ -1,3 +1,6 @@
 playbook.retry
 start.sh
 id_rsa
+logs.txt
+hosts
+ansible.cfg
