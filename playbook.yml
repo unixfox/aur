@@ -10,7 +10,7 @@
       uri: url=https://aurbs.unixfox.eu
       register: result
       until: result.status == 200
-      retries: 1
+      retries: 3
       delay: 30
       failed_when: false
     - name: Abort if AurBS is up
