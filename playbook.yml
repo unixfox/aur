@@ -3,6 +3,21 @@
 
 # check when down
 
+- name: Check if AurBS is up
+  hosts: localhost
+  tasks:
+    - name: Checking aurbs.unixfox.eu
+      uri: url=https://aurbs.unixfox.eu
+      register: result
+      until: result.status == 200
+      retries: 1
+      delay: 30
+      failed_when: false
+    - name: Abort if AurBS is up
+      fail:
+        msg: "AurBS is up and doesn't need to be provisioned."
+      when: result.status == 200
+
 - name: Configuring the base
   hosts: localhost
   tasks:
@@ -226,6 +241,7 @@
         record: aurbs
         type: A
         solo: true
+        proxied: yes
         value: "{{ ansible_ssh }}"
         account_email: mimidevos2@gmail.com
         account_api_token: "{{ lookup('env','cloudflare_api_key') }}"
