@@ -7,5 +7,5 @@ else
     wget https://github.com/unixfox/aur/raw/master/aurbs.yml -O /etc/aurbs.yml
     curl -sS https://raw.githubusercontent.com/unixfox/aur/master/pkgs >> /etc/aurbs.yml
     aurbs > /var/log/aurbs/"$DATE".txt
-    lftp "ftp://"$FTP_USER":"$FTP_PASSWORD"@"$FTP_HOST"" -e "set ftp:ssl-allow no; mirror -R -e /var/lib/aurbs/public_repo/ / ; quit"
+    rsync -av -T "/var/tmp" --size-only --no-perms --no-owner --no-group --copy-links --delete /var/lib/aurbs/public_repo/ /mnt/ftp
 fi
