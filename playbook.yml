@@ -1,9 +1,7 @@
 #!/usr/bin/env ansible-playbook
 ---
 
-# curlftpfs http://www.debiantutorials.com/automated-backups-to-ftp-server-using-rsync-and-curlftpfs/
-# curlftpfs "$FTP_HOST" /mnt/ftp -o user="$FTP_USER":"$FTP_PASSWORD" -o allow_other
-# rsync -av -T "/var/tmp" --size-only --no-perms --no-owner --no-group --copy-links --delete /var/lib/aurbs/public_repo/ /mnt/ftp
+# check when down
 
 - name: Configuring the base
   hosts: localhost
@@ -98,7 +96,7 @@
       user: name=aurbs group=daemon groups=wheel append=yes state=present home=/var/cache/aurbs shell=/bin/bash
     - name: Installing pacman dependencies
       pacman:
-        name: devtools,rsync,python-setuptools,python-simplejson,python-yaml,python-pymongo,python-flask,pyalpm,ccache,sudo,yaourt,git,wget,lighttpd,mongodb,unzip,arch-install-scripts,curl,curlftpfs,package-query
+        name: devtools,rsync,python-setuptools,python-simplejson,python-yaml,python-pymongo,python-flask,pyalpm,ccache,sudo,yaourt,git,wget,lighttpd,mongodb,unzip,arch-install-scripts,curl,curlftpfs,package-query,fuse2
         update_cache: yes
     - name: Creating directories for second volume
       file: path=/mnt/var state=directory
@@ -139,9 +137,7 @@
         src: /dev/xvdb
         fstype: ext4
         state: mounted
-    - name: Upgrading the system
-      pacman: update_cache=yes upgrade=yes
-    - name: set timezone to Asia/Tokyo
+    - name: set timezone
       timezone:
         name: Europe/Paris
     - name: install yaourt
@@ -224,23 +220,19 @@
         state: started
     - name: Enabling at boot and starting lighttpd
       systemd: state=started name=lighttpd enabled=yes
-    - name: Removing the old IP of the record on Cloudflare
-      cloudflare_dns:
-        zone: unixfox.eu
-        record: aurbs
-        type: A
-        state: absent
-        account_email: mimidevos2@gmail.com
-        account_api_token: "{{ lookup('env','cloudflare_api_key') }}"
-      register: record
     - name: Updating the IP of the EC2 instance to CloudFlare
       cloudflare_dns:
         zone: unixfox.eu
         record: aurbs
         type: A
+        solo: true
         value: "{{ ansible_ssh }}"
         account_email: mimidevos2@gmail.com
         account_api_token: "{{ lookup('env','cloudflare_api_key') }}"
       register: record
+    - name: Creating directory for ftp point mount
+      file: path=/mnt/ftp state=directory
+    - name: Loading the fuse module
+      command: modprobe fuse
     - name: Mounting the FTP server to /mnt/ftp
-      command: 'curlftpfs "$FTP_HOST" /mnt/ftp -o user="$FTP_USER":"$FTP_PASSWORD" -o allow_other'
+      command: curlftpfs "{{ lookup('env','FTP_HOST') }}" /mnt/ftp -o user="{{ lookup('env','FTP_USER') }}":"{{ lookup('env','FTP_PASSWORD') }}" -o allow_other
