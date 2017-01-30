@@ -62,7 +62,7 @@
       wait: yes
       group_id: "{{ basic_firewall.group_id }}"
       volumes:
-        - device_name: /dev/sdb
+        - device_name: /dev/sda1
           volume_type: gp2
           volume_size: 100
           delete_on_termination: true
@@ -111,45 +111,6 @@
       pacman:
         name: devtools,rsync,python-setuptools,python-simplejson,python-yaml,python-pymongo,python-flask,pyalpm,ccache,sudo,yaourt,git,wget,lighttpd,mongodb,unzip,arch-install-scripts,curl,curlftpfs,package-query,fuse2
         update_cache: yes
-    - name: Creating directories for second volume
-      file: path=/mnt/var state=directory
-    - name: Check if second volume already formated
-      shell: lsblk -as /dev/xvdb -o FSTYPE | grep -q ext4 && echo Present || echo Absent
-      register: checkpartition
-      changed_when: false
-    - name: Formating the second volume
-      command: "mkfs -t ext4 /dev/xvdb"
-      when: checkpartition.stdout == "Absent"
-    - name: Mounting the second volume
-      mount:
-        name: /mnt/var
-        src: /dev/xvdb
-        fstype: ext4
-        state: mounted
-    - name: Synchronize /var and /mnt/var
-      synchronize:
-        src: /var
-        dest: /mnt
-        rsync_opts:
-          - "--one-file-system"
-          - "-P"
-      delegate_to: "{{ inventory_hostname }}"
-    - name: Unmounting the second volume
-      mount:
-        name: /mnt/var
-        src: /dev/xvdb
-        fstype: ext4
-        state: unmounted
-    - name: Remove /var
-      file:
-        path: /var
-        state: absent
-    - name: Mounting the second volume to /var
-      mount:
-        name: /var
-        src: /dev/xvdb
-        fstype: ext4
-        state: mounted
     - name: set timezone
       timezone:
         name: Europe/Paris
