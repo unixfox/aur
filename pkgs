@@ -2,7 +2,7 @@
 - yaourt
 - rambox-bin
 - albert
-- libc++
+- libc++-msan
 - discord-canary
 - feedthebeast
 - firefox-developer-fr
@@ -111,6 +111,9 @@
 - perl-gnome2-wnck
 - shutter
 - ffmpeg0.10
+- libgnome
+- libgnome-data
+- libbonoboui
 - libgnomeui
 - gnome-perl
 - gnome-vfs-nosmb
