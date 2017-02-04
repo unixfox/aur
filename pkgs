@@ -81,7 +81,7 @@
 - grumpy-git
 - lego-git
 - teamspeak3-server
-- gitea
+- gitea-git
 - influxdb
 - sonarqube
 - ncurses5-compat-libs
