@@ -108,8 +108,10 @@
 - skype
 - teamviewer
 - teleconsole
+- perl-gnome2-wnck
 - shutter
 - ffmpeg0.10
+- libgnomeui
 - gnome-perl
 - gnome-vfs-nosmb
 - gnome-vfs-perl
