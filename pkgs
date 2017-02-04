@@ -124,3 +124,6 @@
 - ttf-oxygen
 - zabbix-server
 - linux-mainline
+- linux-mainline-headers
+- linux-mainline-usermode
+- linux-mainline-usermode-modules
