@@ -88,7 +88,6 @@
 - sentry
 - iksemel
 - zabbix-agent
-- zabbix-server-mysql
 - haste-server-git
 - libmypaint-git
 - gegl-git
