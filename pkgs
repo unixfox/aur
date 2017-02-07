@@ -3,6 +3,7 @@
 - rambox-bin
 - albert
 - libc++-msan
+- libc++abi
 - discord-canary
 - feedthebeast
 - firefox-developer-fr
