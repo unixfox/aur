@@ -19,5 +19,6 @@ public_repo:
 
 architectures:
 	- x86_64
+	- i686
 
 aurpkgs:
