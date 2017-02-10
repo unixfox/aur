@@ -123,3 +123,6 @@
 - zabbix-server
 - pacmanager-bin
 - nodebb
+- ossec-server
+- ossec-local
+- ossec-agent
