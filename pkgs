@@ -126,3 +126,4 @@
 - ossec-server
 - ossec-local
 - ossec-agent
+- lib32-qt4
