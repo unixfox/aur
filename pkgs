@@ -102,7 +102,6 @@
 - insomnia
 - google-chrome
 - simplenote-electron-bin
-- skype
 - teamviewer
 - teleconsole
 - perl-gnome2-wnck
@@ -126,5 +125,3 @@
 - ossec-server
 - ossec-local
 - ossec-agent
-- lib32-qt4
-- lib32-libmng
