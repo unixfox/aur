@@ -88,7 +88,7 @@
 - name: Setting up AurBS
   hosts: aurbs
   remote_user: root
-  gather_facts: yes
+  gather_facts: false
   vars:
     makepkg_nonroot_user: aurbs
   pre_tasks:
