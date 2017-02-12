@@ -105,7 +105,7 @@
         state: present
         regexp: '^%wheel'
         line: '%wheel ALL=(ALL) NOPASSWD: ALL'
-    - name: Add sudoers users to wheel group
+    - name: Add aurbs user to wheel/sudo group
       user: name=aurbs group=daemon groups=wheel append=yes state=present home=/var/cache/aurbs shell=/bin/bash
     - name: Installing pacman dependencies
       pacman:
@@ -192,6 +192,8 @@
       systemd:
         name: aurbs.service
         state: started
+    - name: Add http user to daemon group
+      user: name=http groups=daemon append=yes
     - name: Enabling at boot and starting lighttpd
       systemd: state=started name=lighttpd enabled=yes
     - name: Updating the IP of the EC2 instance to CloudFlare
