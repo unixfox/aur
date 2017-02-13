@@ -77,9 +77,7 @@
 - java-service-wrapper
 - ruby-highline
 - grumpy-git
-- lego-git
 - teamspeak3-server
-- gitea-git
 - influxdb
 - sonarqube
 - ncurses5-compat-libs
