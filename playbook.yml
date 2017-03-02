@@ -58,7 +58,7 @@
       instance_tags:
         Name: archlinux
       instance_type: t2.medium
-      image: ami-d763a7b8
+      image: ami-723bee1d
       wait: yes
       group_id: "{{ basic_firewall.group_id }}"
       volumes:
