@@ -128,3 +128,5 @@
 - python-bcdoc
 - python-guzzle-sphinx-theme
 - aws-cli-git
+- lego-git
+- gitea-git
