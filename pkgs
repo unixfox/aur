@@ -38,6 +38,7 @@
 - cower
 - libicns
 - pythonqt
+- quazip
 - screencloud
 - ruby-archive-tar-minitar
 - ruby-commander-4.2.1
@@ -117,6 +118,7 @@
 - trizen
 - ttf-oxygen
 - zabbix-server
+- gconf-perl
 - pacmanager-bin
 - nodebb
 - ossec-server
