@@ -118,7 +118,7 @@
 - trizen
 - ttf-oxygen
 - zabbix-server
-- gconf-perl
+- perl-gnome2-gconf
 - pacmanager-bin
 - nodebb
 - ossec-server
