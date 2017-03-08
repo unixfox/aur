@@ -1,9 +1,9 @@
 # AUR public server (powered by AurBS)
 
 * State of the server : **testing/beta**
-* Issues of the project:
-  * Issues related to the build server: https://github.com/unixfox/aurbs/issues
-  * Issues related to this repo/webserver that serves files compiled by the build server: https://github.com/unixfox/aur/issues
+* Issues related to:
+  * the build server: https://github.com/unixfox/aurbs/issues
+  * this repo/webserver that serves files compiled by the build server: https://github.com/unixfox/aur/issues
 * Uptime of the server : https://status.unixfox.eu/778526456
 
 # FAQ
