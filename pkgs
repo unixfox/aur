@@ -132,4 +132,5 @@
 - lego-git
 - gitea-git
 - jdk-devel
+- rust-nightly-bin
 - rls
