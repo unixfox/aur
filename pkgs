@@ -136,3 +136,15 @@
 - jdk-devel
 - rust-nightly-bin
 - rls
+- doctl-bin
+- aura-bin
+- monero
+- pamac-pacaur
+- peek
+- shutter
+- translate-shell
+- i2p-bin
+- micro
+- xpra-winswitch-svn
+- rpm-org
+- python-path
