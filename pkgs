@@ -125,8 +125,6 @@
 - ossec-local
 - ossec-agent
 - gnome-mpv
-- python2-pydbus
-- green-recorder-git
 - python-bcdoc
 - python-guzzle-sphinx-theme
 - aws-cli-git
