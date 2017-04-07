@@ -86,7 +86,6 @@
 - ncurses5-compat-libs
 - sentry
 - iksemel
-- zabbix-agent
 - haste-server-git
 - libmypaint-git
 - gegl-git
@@ -119,7 +118,6 @@
 - python-patch
 - trizen
 - ttf-oxygen
-- zabbix-server
 - perl-gnome2-gconf
 - pacmanager-bin
 - nodebb
