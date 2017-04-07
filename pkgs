@@ -125,6 +125,7 @@
 - ossec-local
 - ossec-agent
 - gnome-mpv
+- python2-pydbus
 - green-recorder-git
 - python-bcdoc
 - python-guzzle-sphinx-theme
@@ -139,10 +140,15 @@
 - monero
 - pamac-pacaur
 - peek
+- gnome-perl
 - shutter
 - translate-shell
 - i2p-bin
 - micro
+- rencode
+- python2-gtkglext
+- python-lz4
+- python2-lz4
 - xpra-winswitch-svn
 - rpm-org
 - python-path
