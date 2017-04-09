@@ -148,3 +148,5 @@
 - xpra-winswitch-svn
 - rpm-org
 - python-path
+- mesa-git
+- linux-mainline
