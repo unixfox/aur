@@ -148,5 +148,6 @@
 - rpm-org
 - python-path
 - mesa-git
+- linux-mainline-headers
 - linux-mainline
 - xf86-video-nouveau-git
