@@ -19,6 +19,8 @@
 - phpstorm
 - popcorntime-bin
 - pycharm-community
+- libcurl-openssl-1.0
+- libopenssl-1.0-compat
 - spotify
 - system-san-francisco-font-git
 - visual-studio-code
@@ -49,6 +51,7 @@
 - ruby-net-ssh-2.9.2
 - ruby-net-ssh-multi
 - ruby-open4
+- ruby-httpclient-2.6
 - rhc
 - smartgit
 - tor-browser-fr
@@ -80,6 +83,7 @@
 - ruby-highline
 - grumpy-git
 - teamspeak3-server
+
 - influxdb
 - sonarqube
 - ncurses5-compat-libs
@@ -145,10 +149,12 @@
 - xpra-winswitch-svn
 - rpm-org
 - python-path
+- llvm-libs-svn
 - mesa-git
 - linux-mainline
 - xf86-video-nouveau-git
 - sublime-text
 - vokoscreen
 - teamviewer
+- peco
 - pet-git
