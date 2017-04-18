@@ -24,7 +24,7 @@ Server = https://aur.unixfox.eu/$arch
 ```
 2.Update your repositories:
 ```
-sudo pacman -Syu
+sudo pacman -Sy
 ```
 
 ## Why my package hasn't been built?
