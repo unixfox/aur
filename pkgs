@@ -149,8 +149,6 @@
 - xpra-winswitch-svn
 - rpm-org
 - python-path
-- llvm-libs-svn
-- mesa-git
 - linux-mainline
 - xf86-video-nouveau-git
 - sublime-text
