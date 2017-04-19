@@ -199,8 +199,9 @@
     - name: Updating the IP of the EC2 instance to CloudFlare
       cloudflare_dns:
         zone: unixfox.eu
-        record: host.aur
+        record: aurbs
         type: A
+        proxied: yes
         solo: true
         value: "{{ ansible_ssh }}"
         account_email: mimidevos2@gmail.com
