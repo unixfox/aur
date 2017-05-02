@@ -41,7 +41,6 @@
 - cower
 - libicns
 - pythonqt
-- quazip
 - screencloud
 - ruby-archive-tar-minitar
 - ruby-commander-4.2.1
@@ -137,7 +136,6 @@
 - doctl-bin
 - aura-bin
 - monero
-- pamac-pacaur
 - peek
 - translate-shell
 - i2p-bin
