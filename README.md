@@ -12,7 +12,7 @@
 2. Add your package(s) at the end of the file using the same way as others (with a `-`). Please check if your package isn't already in the list.
 3. Save the file and create a pull request.
 4. Wait for the owner accepts the pull request.
-5. Check current status of your package at https://aurbs.unixfox.eu/status.
+5. Check current status of your package at http://aurbs.unixfox.eu/status.
 
 ## How to add the build server to my pacman?
 
@@ -28,7 +28,7 @@ sudo pacman -Sy
 ```
 
 ## Why my package hasn't been built?
-You should check if there are any problem with your package : https://aurbs.unixfox.eu/problems.
+You should check if there are any problem with your package : http://aurbs.unixfox.eu/problems.
 
 If you need some help with your package(s), you can open [issue](https://github.com/unixfox/aur/issues).
 
