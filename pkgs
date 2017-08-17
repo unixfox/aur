@@ -3,7 +3,8 @@
 - rambox-bin
 - albert
 - feedthebeast
-- firefox-developer-fr
+- firefox-dev
+- firefox-nightly
 - arangodb
 - gitkraken
 - heroku-toolbelt
@@ -165,3 +166,4 @@
 - python-netfilterqueue-git
 - opensnitch-git
 - android-studio
+- 
