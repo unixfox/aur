@@ -166,4 +166,11 @@
 - python-netfilterqueue-git
 - opensnitch-git
 - android-studio
-- 
+- shutter
+- servo-latest
+- copay
+- android-sdk-platform-tools
+- green-recorder-git
+- it87-dkms-git
+- yubico-yubioath-desktop
+- yubikey-personalization-gui-git
