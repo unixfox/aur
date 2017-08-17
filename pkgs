@@ -1,8 +1,6 @@
 - package-query
 - yaourt
-- rambox-bin
 - albert
-- feedthebeast
 - firefox-dev
 - firefox-nightly
 - arangodb
@@ -28,7 +26,6 @@
 - wrk
 - xtitle
 - soundnode-app-bin
-- intellij-idea-ultimate-edition
 - downgrade
 - postman-bin
 - lightdm-webkit2-greeter
@@ -38,7 +35,6 @@
 - jd-gui-bin
 - gyazo
 - i3-kde
-- heroku-toolbelt
 - cower
 - libicns
 - pythonqt
@@ -56,7 +52,6 @@
 - smartgit
 - tor-browser-fr
 - webtorrent-desktop-bin
-- firefox-developer
 - etcher
 - gnome-twitch
 - harmony-player
@@ -123,9 +118,6 @@
 - perl-gnome2-gconf
 - pacmanager-bin
 - nodebb
-- ossec-server
-- ossec-local
-- ossec-agent
 - gnome-mpv
 - python-bcdoc
 - python-guzzle-sphinx-theme
@@ -147,8 +139,6 @@
 - xpra-winswitch-svn
 - rpm-org
 - python-path
-- linux-mainline
-- xf86-video-nouveau-git
 - sublime-text
 - sublime-text-dev
 - vokoscreen
@@ -167,7 +157,6 @@
 - opensnitch-git
 - android-studio
 - shutter
-- servo-latest
 - copay
 - android-sdk-platform-tools
 - green-recorder-git
