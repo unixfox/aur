@@ -87,6 +87,7 @@
 - ungoogled-chromium-bin
 - rocketchat-server
 - discord
+- libc++
 - heidisql
 - nvm
 - nexus3
