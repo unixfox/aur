@@ -19,7 +19,6 @@
 - popcorntime-bin
 - pycharm-community
 - libcurl-openssl-1.0
-- libopenssl-1.0-compat
 - spotify
 - system-san-francisco-font-git
 - visual-studio-code
@@ -55,7 +54,6 @@
 - etcher
 - gnome-twitch
 - harmony-player
-- mongochef
 - multimc5
 - perl-net-arp
 - perl-expect
@@ -86,7 +84,6 @@
 - haste-server-git
 - libmypaint-git
 - gegl-git
-- nodejs-lts-argon
 - ungoogled-chromium-bin
 - rocketchat-server
 - discord
@@ -94,7 +91,6 @@
 - nvm
 - nexus3
 - menulibre
-- pgadmin4
 - insomnia
 - google-chrome
 - simplenote-electron-bin
