@@ -60,10 +60,7 @@
 - perl-io-stty
 - perl-crypt-rijndael
 - perl-gtk2-ex-simple-list
-- perl-gnome2-vte
-- uuid
 - perl-gtk2-unique
-- pacmanager-git
 - multibootusb
 - burpsuite
 - dnssec-tlsa-validator-core
@@ -113,7 +110,6 @@
 - trizen
 - ttf-oxygen
 - perl-gnome2-gconf
-- pacmanager-bin
 - nodebb
 - gnome-mpv
 - python-bcdoc
