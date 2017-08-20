@@ -143,8 +143,6 @@
 - shutter
 - copay
 - android-sdk-platform-tools
-- python2-pydbus
-- green-recorder-git
 - it87-dkms-git
 - yubico-yubioath-desktop
 - yubikey-personalization-gui-git
