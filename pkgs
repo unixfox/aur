@@ -138,6 +138,8 @@
 - python-iptables-git
 - opensnitch-git
 - android-studio
+- libgnome-data
+- libbonobo
 - libgnome
 - libbonoboui
 - libgnomeui
