@@ -139,6 +139,8 @@
 - python-iptables-git
 - opensnitch-git
 - android-studio
+- libbonoboui
+- libgnomeui
 - gnome-perl
 - shutter
 - copay
