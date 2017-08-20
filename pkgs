@@ -80,6 +80,7 @@
 - ungoogled-chromium-bin
 - rocketchat-server
 - discord
+- libc++abi
 - libc++
 - heidisql
 - nvm
@@ -139,11 +140,14 @@
 - nginx-custom
 - python-dpkt
 - python-netfilterqueue-git
+- python-iptables-git
 - opensnitch-git
 - android-studio
+- gnome-perl
 - shutter
 - copay
 - android-sdk-platform-tools
+- python2-pydbus
 - green-recorder-git
 - it87-dkms-git
 - yubico-yubioath-desktop
