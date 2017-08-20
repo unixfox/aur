@@ -49,7 +49,7 @@
 - ruby-httpclient-2.6
 - rhc
 - smartgit
-- tor-browser-fr
+- tor-browser-en
 - webtorrent-desktop-bin
 - etcher
 - gnome-twitch
@@ -144,3 +144,5 @@
 - yubico-yubioath-desktop
 - yubikey-personalization-gui-git
 - wps-office
+- monero-bin
+- keepassxc-git
