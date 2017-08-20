@@ -78,9 +78,9 @@
 - libmypaint-git
 - ungoogled-chromium-bin
 - rocketchat-server
-- discord
 - libc++abi
 - libc++
+- discord
 - heidisql
 - nvm
 - nexus3
