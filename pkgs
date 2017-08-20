@@ -139,6 +139,7 @@
 - python-iptables-git
 - opensnitch-git
 - android-studio
+- libgnome
 - libbonoboui
 - libgnomeui
 - gnome-perl
