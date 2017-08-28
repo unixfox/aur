@@ -160,6 +160,9 @@
 - libbs2b
 - shine
 - libmysofa
+- libmfx
+- blackmagic-decklink-sdk
+- libvmaf
 - ffmpeg-full-git
 - nut-multimedia-git
 - ffmpeg-full
