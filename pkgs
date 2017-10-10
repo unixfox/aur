@@ -153,3 +153,6 @@
 - qownnotes
 - nextcloud-client
 - sia-ui
+- python2-pwntools
+- python2-intervaltree
+- ropgadget
