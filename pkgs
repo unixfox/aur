@@ -155,5 +155,4 @@
 - python2-pwntools
 - python2-intervaltree
 - ropgadget
-- mist
-- mist-classic
+- ethereumwallet-bin
