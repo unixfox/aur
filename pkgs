@@ -1,6 +1,6 @@
 - package-query
 - yaourt
-- firefox-dev
+- firefox-developer
 - firefox-nightly
 - gitkraken
 - heroku-cli
@@ -119,8 +119,6 @@
 - python2-lz4
 - rpm-org
 - python-path
-- sublime-text
-- sublime-text-dev
 - vokoscreen
 - peco
 - steam-wine-git
