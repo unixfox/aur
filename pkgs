@@ -81,7 +81,6 @@
 - python-bcdoc
 - python-guzzle-sphinx-theme
 - aws-cli-git
-- jdk-devel
 - doctl-bin
 - aura-bin
 - peek
