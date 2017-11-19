@@ -102,8 +102,6 @@
 - python-netfilterqueue-git
 - python-iptables-git
 - opensnitch-git
-- android-studio
-- android-sdk-platform-tools
 - it87-dkms-git
 - yubico-yubioath-desktop
 - yubikey-personalization-gui-git
