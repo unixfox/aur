@@ -80,7 +80,7 @@
 - gnome-mpv
 - python-bcdoc
 - python-guzzle-sphinx-theme
-- aws-cli-git
+- python2-aws-cli
 - doctl-bin
 - aura-bin
 - peek
