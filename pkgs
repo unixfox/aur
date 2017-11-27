@@ -119,3 +119,9 @@
 - ropgadget
 - ethereumwallet-bin
 - monero-gui-bin
+- anbox-image
+- process-cpp
+- properties-cpp
+- dbus-cpp
+- anbox-modules-dkms-git
+- anbox-git
