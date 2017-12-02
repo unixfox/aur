@@ -121,3 +121,6 @@
 - monero-gui-bin
 - pet-bin
 - copay-bin
+- linux-mainline
+- linux-mainline-headers
+- linux-mainline-docs
