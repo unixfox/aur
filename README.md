@@ -11,7 +11,7 @@
 ## How to add package(s) to the list?
 1. Edit the file `pkgs` : https://github.com/unixfox/aur/edit/master/pkgs
 2. Add your package(s) at the end of the file using the same way as others (with a `-`). Please check if your package isn't already in the list.
-3. Save the file and create a pull request.
+3. Commit changes and create a pull request.
 4. Wait for the owner accepts the pull request.
 5. Check current status of your package at https://aurbs.unixfox.eu/status.
 
