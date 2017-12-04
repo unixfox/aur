@@ -90,7 +90,7 @@
 - peek
 - translate-shell
 - i2p-bin
-- micro
+- micro-bin
 - rencode
 - python2-gtkglext
 - python-lz4
