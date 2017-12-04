@@ -1,28 +1,13 @@
 #!/usr/bin/env ansible-playbook
 ---
 
-- name: Check if AurBS is up
-  hosts: localhost
-  tasks:
-    - name: Checking aurbs.unixfox.eu
-      uri: url=https://aurbs.unixfox.eu
-      register: result
-      until: result.status == 200
-      retries: 3
-      delay: 30
-      failed_when: false
-    - name: Abort if AurBS is up
-      fail:
-        msg: "AurBS is up and doesn't need to be provisioned."
-      when: result.status == 200
-
 - name: Configuring the base
   hosts: localhost
   tasks:
   - name: Adding a key pair
     ec2_key:
-      name: ec2_default
-      key_material: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDGL17uwMs/YfCSlJ8AgB8RhYG5ta9yVpaSex/ZkD5RpZWZ76tCEns83DRNnbB116zB/wFO3mOHz9VXwZOUEdZUF3sxw/0PgYPu7FdR+qQmmlnHB70AHY2KFJgJQ8AlIVZsc3mMeOr0hu/W1Q2C3bkF5nYQ22Wg7/eZ5wJUyNlUbJSRH8CCZvdlwY2d4Fo2vIFowMf41tpwTyJFUT9aCqsDK3/lyKILeZdhjh4rsBImMORWqTOHy4lpY2NQEsaFSjI6OnnXK+tCzJzFwdMK5WoeDzkNtNwI17NlES/IM8m6fmfwJGIIn4UxQp5M1eACYk0eJD3WYXyEX9RjOWbGIgPRvxtvi+TCTGYYTs/JUbcLpq6ZR14f7jyvzVK1PJq+X0bDym9/hVDXf603s8KB6eWY4NE4M/BA7HFRBUK1iL87nizBD33We08qc7XSY4S1yeMXbJ133p/pPNuU7ZtAYvyBCNnWj0tQXfkYqS9bfOl55M6/wYF+qGEB91zk/UsQLU3rz6O9hdkyeMM4gYx9cmr7lRCbP+5X90gRUMjNlC6bnVluvntmGLeDrg+E6/EuDCgCHz53XLBZ9Nf2EMLYe7SEfQ3UtM7auhtOPfS8UPJqHe9dFGz6HHWR50XF9pt4WjAD8KYdWMMGYt1VoH9QW+dxkjERTtDzdkTjsfHgVOM+vw== ec2'
+      name: aurbs
+      key_material: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCu4mWcPkzHabPvJKlRu/H19rssMrcbByIIHcBBmENLtDdv0hPUyaLZhnfSVzK+0FzRF+y8ZknXZk7cLn+X2AX1BwrQojAYtGSLTg9L62FJEXgvw+NlmeqU7zmXA7/xRVsrA6YLCOfFMvb+FHD2pk/mI7P4Sxp45GQiQh7kAcemXaxDuNC/uhX9Y8Ly0t8NHsTZvmovEv41k8orJ/kiA+gmDtS5PfwKv7DWl0eJ3VRYFYcreE1YnDAquuBD0tG0NDN7hjyoJd73dOB3YEIeN3kfdEXCuO53VSWQ00uBFISeF7DzKffefLHeYHzwvTsk8huEkqVuhWX5U9nxH1S6OuftThzeekkcwBgLrqYNpoS1UkPOc2tFJBGyjP/kCnQsYAcB1FZ1+bWCLSNrjQr+4uSDFnd43JRQjeTqwD1Ui1UEBLPNmiO8feIdgq8TSXZ3CftLJ2RI2cCypbC+gfBH6CIA7zwTtuHbg8qX5/1L2xWHsq/7ih9CZB7MY8xk7XTInh7MzGjHI1/qObxzdIiCxpBZD4jy3rJVfAOAKG/C5U/eKrDk5e+9FOQcCHCEsdbEFWO8JyFsrEzZ64sb2CkT0l3HKZqMpfD1UKVgeQ0amv6KWT8V0FvWjAO/YR6e4vVw99/LHLqL4eq74wFFL5hJ05RCa+6vdavbuasAf3dk5EUNQ== ec2'
       state: present
   - name: Creating a security group
     ec2_group:
@@ -51,20 +36,20 @@
     register: basic_firewall
   - name: Creating the instance
     ec2:
-      key_name: ec2_default
+      key_name: aurbs
       exact_count: 1
       count_tag:
         Name: archlinux
       instance_tags:
         Name: archlinux
-      instance_type: t2.medium
-      image: ami-723bee1d
+      instance_type: t2.micro
+      image: ami-2cc44143
       wait: yes
       group_id: "{{ basic_firewall.group_id }}"
       volumes:
         - device_name: /dev/sda1
           volume_type: gp2
-          volume_size: 100
+          volume_size: 30
           delete_on_termination: true
     register: ec2
     tags: ec2
@@ -115,9 +100,9 @@
       timezone:
         name: Europe/Paris
     - name: install yaourt
-      include: aur/pkg.yml pkg_name=yaourt
+      aur: name=yaourt user=aurbs
     - name: install python-flup-hg
-      include: aur/pkg.yml pkg_name=python-flup-hg
+      aur: name=python-flup-hg user=aurbs
     - name: Cloning the AurBS repository
       git:
         repo: https://github.com/unixfox/aurbs.git
