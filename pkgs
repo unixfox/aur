@@ -83,6 +83,7 @@
 - python2-guzzle-sphinx-theme
 - python2-bcdoc
 - python2-s3transfer
+- python2-parse_type
 - python2-behave
 - python2-botocore
 - python2-aws-cli
