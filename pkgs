@@ -128,4 +128,6 @@
 - pet-bin
 - copay-bin
 - linux-mainline
+- libc++abi
+- libc++
 - discord
