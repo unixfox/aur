@@ -72,7 +72,6 @@
 - perl-gnome2-gconf
 - gnome-mpv
 - python-bcdoc
-- python-guzzle-sphinx-theme
 - python2-guzzle-sphinx-theme
 - python2-bcdoc
 - python2-s3transfer
