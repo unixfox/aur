@@ -37,9 +37,7 @@
 - dnssec-tlsa-validator-core
 - pamac-aur
 - pkgbrowser
-- ruby-net-ssh
 - java-service-wrapper
-- ruby-highline
 - ncurses5-compat-libs
 - ungoogled-chromium-bin
 - heidisql
