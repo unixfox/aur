@@ -9,7 +9,6 @@
 - numix-circle-icon-theme-git
 - pacaur
 - popcorntime-bin
-- pycharm-community
 - libcurl-openssl-1.0
 - system-san-francisco-font-git
 - wrk
@@ -24,10 +23,6 @@
 - libicns
 - pythonqt
 - screencloud
-- ruby-archive-tar-minitar
-- ruby-highline-1.6
-- ruby-net-scp
-- ruby-net-ssh-2.9.2
 - smartgit
 - tor-browser-en
 - webtorrent-desktop-bin
