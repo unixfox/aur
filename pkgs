@@ -109,6 +109,7 @@
 - python2-intervaltree
 - ropgadget
 - ethereumwallet-bin
+- libmonero-wallet
 - monero-wallet-qt
 - pet-bin
 - copay-bin
