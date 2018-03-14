@@ -104,6 +104,7 @@
 - chromaprint-fftw
 - qownnotes
 - nextcloud-client
+- sia-daemon
 - sia-ui
 - python2-pwntools
 - python2-intervaltree
