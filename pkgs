@@ -69,7 +69,6 @@
 - python2-s3transfer
 - python2-parse_type
 - python2-behave
-- python2-botocore
 - python2-aws-cli
 - doctl-bin
 - aura-bin
@@ -127,7 +126,6 @@
 - tilix-bin
 - insomnia
 - virtualbox-ext-oracle
-- dnscrypt-proxy-go
 - softmaker-office-2018-bin
 - feedreader
 - burpsuite
