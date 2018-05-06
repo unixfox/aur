@@ -107,7 +107,6 @@
 - nwjs-bin
 - bisq-bin
 - electron-cash
-- gcc5
 - keepass-plugin-rpc
 - keybase-bin
 - orbit2
@@ -120,7 +119,6 @@
 - burpsuite
 - conky-cli
 - crossover
-- dnscrypt-proxy-gui
 - iota-wallet-bin
 - realvnc-vnc-viewer
 - screencast-git
