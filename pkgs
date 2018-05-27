@@ -46,7 +46,6 @@
 - teleconsole-bin
 - perl-gnome2-wnck
 - gnome-vfs-nosmb
-- gnome-vfs-perl
 - gnomecanvas-perl
 - goocanvas1
 - hyper
