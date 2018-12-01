@@ -11,7 +11,6 @@
 - xtitle
 - downgrade
 - postman-bin
-- lightdm-webkit2-greeter
 - xflux
 - steam-fonts
 - jd-gui-bin
@@ -66,7 +65,6 @@
 - python2-aws-cli
 - doctl-bin
 - aura-bin
-- peek
 - i2p-bin
 - micro-bin
 - rpm-org
@@ -90,7 +88,6 @@
 - libilbc
 - chromaprint-fftw
 - qownnotes
-- nextcloud-client
 - sia-daemon
 - sia-ui
 - python2-pwntools
@@ -118,7 +115,6 @@
 - iota-wallet-bin
 - realvnc-vnc-viewer
 - screencast-git
-- sdcc
 - snapd
 - monero-gui-bin
 - keepass-plugin-keechallenge
