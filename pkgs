@@ -81,7 +81,6 @@
 - it87-dkms-git
 - yubico-yubioath-desktop
 - yubikey-personalization-gui-git
-- keepassxc-git
 - perl-net-arp
 - neovim-git
 - oni
@@ -121,7 +120,6 @@
 - scrcpy-prebuiltserver
 - gnirehtet
 - radeontop
-- servo-latest
 - persepolis
 - mtx-svn
 - bareos-common
