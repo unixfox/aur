@@ -1,124 +1,125 @@
-firefox-nightly
-heroku-cli
-minecraft
-ngrok
-numix-icon-theme-git
-numix-circle-icon-theme-git
-libcurl-openssl-1.0
-system-san-francisco-font-git
-xtitle
-downgrade
-postman-bin
-xflux
-steam-fonts
-jd-gui-bin
-pythonqt
-screencloud
-smartgit
-tor-browser-en
-webtorrent-desktop-bin
-etcher
-harmony-player
-perl-expect
-perl-io-stty
-perl-crypt-rijndael
-perl-gtk2-ex-simple-list
-perl-gtk2-unique
-multibootusb
-dnssec-tlsa-validator-core
-pamac-aur
-pkgbrowser
-java-service-wrapper
-ncurses5-compat-libs
-libevent-compat
-heidisql
-nvm
-menulibre
-insomnia
-google-chrome
-teamviewer
-teamviewer-beta
-teleconsole-bin
-perl-gnome2-wnck
-gnome-mime-data
-gnome-vfs-nosmb
-gnomecanvas-perl
-goocanvas1
-hyper
-ipscan
-libsearpc
-perl-goo-canvas
-perl-gtk2-imageview
-python-node-semver
-python-patch
-trizen
-perl-gnome2-gconf
-python-bcdoc
-python2-guzzle-sphinx-theme
-python2-bcdoc
-python2-parse_type
-python2-behave
-python2-aws-cli
-doctl-bin
-aura-bin
-i2p-bin
-micro-bin
-rpm-org
-python-path
-vokoscreen
-peco
-steam-wine-git
-jdownloader2
-lwks
-python-dpkt
-python-netfilterqueue-git
-python-iptables-git
-opensnitch-git
-it87-dkms-git
-yubico-yubioath-desktop
-yubikey-personalization-gui-git
-perl-net-arp
-neovim-git
-oni
-libilbc
-chromaprint-fftw
-qownnotes
-sia-daemon
-sia-ui
-python2-pwntools
-python2-intervaltree
-ethereumwallet-bin
-monero-bin
-pet-bin
-copay-bin
-yay
-nwjs-bin
-bisq-bin
-electron-cash
-keepass-plugin-rpc
-keybase-bin
-orbit2
-gnome-vfs
-nss-hg
-tilix-bin
-insomnia
-virtualbox-ext-oracle
-softmaker-office-2018-bin
-burpsuite
-conky-cli
-crossover
-iota-wallet-bin
-realvnc-vnc-viewer
-screencast-git
-snapd
-monero-gui-bin
-keepass-plugin-keechallenge
-scrcpy-prebuiltserver
-gnirehtet
-radeontop
-persepolis
-mtx-svn
-bareos-common
-sublime-text-dev
-icinga2
-icingaweb2
+- firefox-nightly
+- heroku-cli
+- minecraft
+- ngrok
+- numix-icon-theme-git
+- numix-circle-icon-theme-git
+- pacaur
+- libcurl-openssl-1.0
+- system-san-francisco-font-git
+- xtitle
+- downgrade
+- postman-bin
+- xflux
+- steam-fonts
+- jd-gui-bin
+- cower
+- pythonqt
+- screencloud
+- smartgit
+- tor-browser-en
+- webtorrent-desktop-bin
+- etcher
+- harmony-player
+- perl-expect
+- perl-io-stty
+- perl-crypt-rijndael
+- perl-gtk2-ex-simple-list
+- perl-gtk2-unique
+- multibootusb
+- dnssec-tlsa-validator-core
+- pamac-aur
+- pkgbrowser
+- java-service-wrapper
+- ncurses5-compat-libs
+- libevent-compat
+- heidisql
+- nvm
+- menulibre
+- insomnia
+- google-chrome
+- teamviewer
+- teamviewer-beta
+- teleconsole-bin
+- perl-gnome2-wnck
+- gnome-mime-data
+- gnome-vfs-nosmb
+- gnomecanvas-perl
+- goocanvas1
+- hyper
+- ipscan
+- libsearpc
+- perl-goo-canvas
+- perl-gtk2-imageview
+- python-node-semver
+- python-patch
+- trizen
+- perl-gnome2-gconf
+- python-bcdoc
+- python2-guzzle-sphinx-theme
+- python2-bcdoc
+- python2-parse_type
+- python2-behave
+- python2-aws-cli
+- doctl-bin
+- aura-bin
+- i2p-bin
+- micro-bin
+- rpm-org
+- python-path
+- vokoscreen
+- peco
+- steam-wine-git
+- jdownloader2
+- lwks
+- python-dpkt
+- python-netfilterqueue-git
+- python-iptables-git
+- opensnitch-git
+- it87-dkms-git
+- yubico-yubioath-desktop
+- yubikey-personalization-gui-git
+- perl-net-arp
+- neovim-git
+- oni
+- libilbc
+- chromaprint-fftw
+- qownnotes
+- sia-daemon
+- sia-ui
+- python2-pwntools
+- python2-intervaltree
+- ethereumwallet-bin
+- monero-bin
+- pet-bin
+- copay-bin
+- yay
+- nwjs-bin
+- bisq-bin
+- electron-cash
+- keepass-plugin-rpc
+- keybase-bin
+- orbit2
+- gnome-vfs
+- nss-hg
+- tilix-bin
+- insomnia
+- virtualbox-ext-oracle
+- softmaker-office-2018-bin
+- burpsuite
+- conky-cli
+- crossover
+- iota-wallet-bin
+- realvnc-vnc-viewer
+- screencast-git
+- snapd
+- monero-gui-bin
+- keepass-plugin-keechallenge
+- scrcpy-prebuiltserver
+- gnirehtet
+- radeontop
+- persepolis
+- mtx-svn
+- bareos-common
+- sublime-text-dev
+- icingaweb2
