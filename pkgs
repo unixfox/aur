@@ -4,7 +4,7 @@
 - ngrok
 - numix-icon-theme-git
 - numix-circle-icon-theme-git
-- pacaur
+- trizen
 - libcurl-openssl-1.0
 - system-san-francisco-font-git
 - xtitle
@@ -13,13 +13,11 @@
 - xflux
 - steam-fonts
 - jd-gui-bin
-- cower
 - pythonqt
 - screencloud
 - smartgit
-- tor-browser-en
 - webtorrent-desktop-bin
-- etcher
+- etcher-bin
 - harmony-player
 - perl-expect
 - perl-io-stty
@@ -66,7 +64,6 @@
 - i2p-bin
 - micro-bin
 - rpm-org
-- python-path
 - vokoscreen
 - peco
 - steam-wine-git
@@ -74,7 +71,6 @@
 - lwks
 - python-dpkt
 - python-netfilterqueue-git
-- python-iptables-git
 - opensnitch-git
 - it87-dkms-git
 - yubico-yubioath-desktop
@@ -92,7 +88,6 @@
 - ethereumwallet-bin
 - monero-bin
 - pet-bin
-- copay-bin
 - yay
 - nwjs-bin
 - bisq-bin
@@ -115,7 +110,7 @@
 - snapd
 - monero-gui-bin
 - keepass-plugin-keechallenge
-- scrcpy-prebuiltserver
+- scrcpy
 - gnirehtet
 - radeontop
 - persepolis
