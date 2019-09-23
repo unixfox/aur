@@ -29,7 +29,6 @@
 - pamac-aur
 - pkgbrowser
 - java-service-wrapper
-- ncurses5-compat-libs
 - libevent-compat
 - heidisql
 - nvm
@@ -86,7 +85,6 @@
 - python2-pwntools
 - python2-intervaltree
 - ethereumwallet-bin
-- monero-bin
 - pet-bin
 - yay
 - nwjs-bin
@@ -104,11 +102,9 @@
 - burpsuite
 - conky-cli
 - crossover
-- iota-wallet-bin
 - realvnc-vnc-viewer
 - screencast-git
 - snapd
-- monero-gui-bin
 - keepass-plugin-keechallenge
 - scrcpy
 - gnirehtet
@@ -129,3 +125,4 @@
 - robo3t-bin
 - terminus-terminal-bin
 - nohang-git
+- asbru-cm
