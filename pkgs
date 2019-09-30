@@ -122,3 +122,7 @@
 - robo3t-bin
 - terminus-terminal-bin
 - asbru-cm
+- perl-expect
+- perl-gtk2-ex-simple-list
+- python-azure-storage
+- nohang-git
