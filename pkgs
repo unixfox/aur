@@ -70,12 +70,12 @@
 - python-netfilterqueue-git
 - opensnitch-git
 - it87-dkms-git
-- yubico-yubioath-desktop
+- yubico-yubioath-desktop-git
 - yubikey-personalization-gui-git
 - perl-net-arp
 - neovim-git
 - oni
-- libilbc
+- libilbc-git
 - chromaprint-fftw
 - qownnotes
 - sia-daemon
