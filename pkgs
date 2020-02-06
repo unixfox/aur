@@ -58,7 +58,6 @@
 - aura-bin
 - i2p-bin
 - micro-bin
-- rpm-org
 - vokoscreen
 - peco
 - steam-wine-git
@@ -124,6 +123,6 @@
 - perl-gtk2-ex-simple-list
 - python-azure-storage
 - nohang-git
-- ungoogled-chromium-bin
+- ungoogled-chromium
 - gtk3-mushrooms
 - cling-git
