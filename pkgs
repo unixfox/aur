@@ -127,3 +127,7 @@
 - gtk3-mushrooms
 - cling-git
 - gconf
+- nvidia-340xx-utils
+- gamin
+- python2-parse
+- uuid
