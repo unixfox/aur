@@ -125,3 +125,4 @@
 - python-libconfigparser
 - python-unicode-slugify
 - python-grpcio-tools
+- nodejs-ipv6
