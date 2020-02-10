@@ -36,7 +36,6 @@
 - teleconsole-bin
 - perl-gnome2-wnck
 - gnome-mime-data
-- gnome-vfs-nosmb
 - gnomecanvas-perl
 - goocanvas1
 - hyper
@@ -51,8 +50,6 @@
 - python-bcdoc
 - python2-guzzle-sphinx-theme
 - python2-bcdoc
-- python2-parse_type
-- python2-behave
 - python2-aws-cli
 - doctl-bin
 - aura-bin
@@ -88,7 +85,6 @@
 - keepass-plugin-rpc
 - keybase-bin
 - orbit2
-- gnome-vfs
 - nss-hg
 - tilix-bin
 - insomnia
@@ -129,5 +125,5 @@
 - gconf
 - nvidia-340xx-utils
 - gamin
-- python2-parse
 - uuid
+- libgnomecanvas
