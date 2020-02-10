@@ -124,3 +124,4 @@
 - python-protobuf-compiler
 - python-libconfigparser
 - python-unicode-slugify
+- python-grpcio-tools
