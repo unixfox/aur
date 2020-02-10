@@ -50,7 +50,6 @@
 - python-bcdoc
 - python2-guzzle-sphinx-theme
 - python2-bcdoc
-- python2-aws-cli
 - doctl-bin
 - aura-bin
 - i2p-bin
@@ -64,7 +63,6 @@
 - python-netfilterqueue-git
 - opensnitch-git
 - it87-dkms-git
-- yubico-yubioath-desktop-git
 - yubikey-personalization-gui-git
 - perl-net-arp
 - neovim-git
@@ -74,8 +72,6 @@
 - qownnotes
 - sia-daemon
 - sia-ui
-- python2-pwntools
-- python2-intervaltree
 - ethereumwallet-bin
 - pet-bin
 - yay
@@ -109,9 +105,6 @@
 - nomachine
 - nvidia-340xx-dkms
 - powershell-bin
-- python-azure
-- python-azure-cli
-- python-msrestazure
 - robo3t-bin
 - terminus-terminal-bin
 - asbru-cm
@@ -127,3 +120,7 @@
 - gamin
 - uuid
 - libgnomecanvas
+- openh264
+- python-protobuf-compiler
+- python-libconfigparser
+- python-unicode-slugify
