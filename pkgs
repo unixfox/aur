@@ -117,6 +117,7 @@
 - cling-git
 - gconf
 - nvidia-340xx-utils
+- lib32-nvidia-340xx-utils
 - gamin
 - uuid
 - libgnomecanvas
@@ -126,3 +127,6 @@
 - python-unicode-slugify
 - python-grpcio-tools
 - nodejs-ipv6
+- wakatime
+- nodejs-nodemon
+- remmina-plugin-rdesktop
