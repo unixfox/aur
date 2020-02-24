@@ -1,4 +1,4 @@
-- firefox-nightly
+pkgs- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
@@ -97,7 +97,7 @@
 - gnirehtet
 - radeontop
 - persepolis
-- mtx-svn
+- mtx-svnetcher-bin
 - icingaweb2
 - caddy-bin
 - chromium-dev
@@ -131,3 +131,9 @@
 - nodejs-nodemon
 - remmina-plugin-rdesktop
 - ripcord
+- woeusb
+- cups-bjnp
+- gcc7
+- gcc7-libs
+- pb-for-desktop
+- ntopng
