@@ -1,4 +1,4 @@
-pkgs- firefox-nightly
+- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
