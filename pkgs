@@ -1,4 +1,4 @@
-- firefox-nightly
+nodejs-serverless- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
@@ -136,3 +136,4 @@
 - gcc7-libs
 - pb-for-desktop
 - ntopng
+- nodejs-serverless
