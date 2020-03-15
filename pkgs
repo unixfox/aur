@@ -132,8 +132,6 @@
 - ripcord
 - woeusb
 - cups-bjnp
-- gcc7
-- gcc7-libs
 - pb-for-desktop
 - ntopng
 - nodejs-serverless
