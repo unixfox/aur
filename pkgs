@@ -125,7 +125,6 @@
 - python-unicode-slugify
 - python-grpcio-tools
 - nodejs-ipv6
-- wakatime
 - nodejs-nodemon
 - remmina-plugin-rdesktop
 - ripcord
