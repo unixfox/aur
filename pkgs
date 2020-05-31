@@ -1,4 +1,4 @@
-- firefox-nightly
+curl-http3- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
@@ -134,3 +134,11 @@
 - ntopng
 - nodejs-serverless
 - intellij-idea-ce
+- curl-http3
+- gcc7
+- gcc7-libs
+- serviio
+- vmware-vmrc
+- mongodb-bin
+- vultr-cli
+- lazydocker
