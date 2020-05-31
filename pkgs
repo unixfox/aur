@@ -1,4 +1,4 @@
-curl-http3- firefox-nightly
+- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
@@ -142,3 +142,4 @@ curl-http3- firefox-nightly
 - mongodb-bin
 - vultr-cli
 - lazydocker
+- curl-http3
