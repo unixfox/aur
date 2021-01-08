@@ -4,7 +4,7 @@
 * Issues related to:
   * this repo/the webserver that serves files compiled by the build server: https://github.com/unixfox/aur/issues
 * Uptime of the server : https://status.unixfox.eu/778526456
-* Binaries: https://aur.unixfox.eu
+* Binaries (amd64): https://aur.unixfox.eu/x86_64/
 
 # FAQ
 ## How to add package(s) to the list?
@@ -15,13 +15,13 @@
 
 ## How to add the build server to my pacman?
 
-1.Add these lines at the end of this file `/etc/pacman.conf`:
+1. Add these lines at the end of this file `/etc/pacman.conf`:
 ```
 [unixfox]
 SigLevel = Never
 Server = https://aur.unixfox.eu/$arch
 ```
-2.Update your repositories:
+2. Update your repositories:
 ```
 sudo pacman -Sy
 ```
