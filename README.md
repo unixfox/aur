@@ -1,4 +1,4 @@
-# AUR public server (powered by AurBS)
+# AUR public server
 
 * State of the server : **testing/beta**
 * Issues related to:
