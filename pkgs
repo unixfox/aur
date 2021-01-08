@@ -1,4 +1,4 @@
-- firefox-nightly
+wps-office- firefox-nightly
 - heroku-cli
 - multimc5
 - ngrok
@@ -180,3 +180,8 @@
 - phonon-qt4-gstreamer
 - phonon-qt4-vlc
 - subnetcalc
+- wps-office
+- wps-office-fonts
+- wps-office-mime
+- ttf-wps-fonts
+- ttf-wps-win10
