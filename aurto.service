@@ -1,0 +1,10 @@
+[Unit]
+Description=aurto
+
+[Service]
+ExecStart=/opt/aurto.sh
+User=unixfox
+Group=unixfox
+
+[Install]
+WantedBy=multi-user.target
