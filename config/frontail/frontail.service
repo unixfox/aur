@@ -1,0 +1,20 @@
+[Unit]
+Description=aurto
+
+[Service]
+ExecStart=/usr/bin/frontail --host 127.0.0.1 /var/tmp/aurto.log
+User=nobody
+Group=nobody
+Environment="HOME=/tmp"
+
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+NoNewPrivileges=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
