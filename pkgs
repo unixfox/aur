@@ -50,7 +50,6 @@
 - python-bcdoc
 - python2-guzzle-sphinx-theme
 - python2-bcdoc
-- doctl-bin
 - aura-bin
 - i2p-bin
 - micro-bin
@@ -99,7 +98,6 @@
 - persepolis
 - icingaweb2
 - caddy2
-- chromium-dev
 - docker-compose-bin
 - nomachine
 - nvidia-340xx-dkms
@@ -186,5 +184,4 @@
 - ttf-wps-fonts
 - ttf-wps-win10
 - growpart
-- ripcord
 - ripcord-arch-libs
