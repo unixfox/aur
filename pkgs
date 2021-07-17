@@ -19,7 +19,6 @@
 - harmony-player
 - perl-io-stty
 - perl-crypt-rijndael
-- perl-gtk2-unique
 - multibootusb
 - dnssec-tlsa-validator-core
 - pamac-aur
